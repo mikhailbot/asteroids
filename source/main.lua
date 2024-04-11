@@ -21,7 +21,7 @@ pd.resetElapsedTime()
 function pd.update()
 	pd.timer.updateTimers()
 	gfx.sprite.update()
-	
+
 	-- Check if it's time to spawn a new asteroid
 	if pd.getElapsedTime() >= spawnInterval then
 		-- Reset the timer
@@ -31,7 +31,7 @@ function pd.update()
 		for i = 1, math.random(1, 4) do
 			table.insert(asteroids, Asteroid(20))
 		end
-		
+
 		-- Occasionally also spawn a big one
 		if math.random(1,4) == 1 then
 			table.insert(asteroids, Asteroid(60))
